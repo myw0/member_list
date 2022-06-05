@@ -11,7 +11,7 @@ public class create
 		ArrayList name = new ArrayList();
 		
 		ArrayList password = new ArrayList();
-		String na, nu;
+		String ni, na, nu;
 		boolean bool = true;
 		
 		while(bool) 
@@ -23,8 +23,11 @@ public class create
             int input = sc.nextInt();
             switch(input) {
             case 1:
-                System.out.println("등록할 아이디를 입력하세요");
+            	System.out.println("등록할 이름을 입력하세요");
                 na = sc.next();
+                 
+                System.out.println("등록할 아이디를 입력하세요");
+                ni = sc.next();
              
                 if(name.indexOf(na) == -1) 
                 {
@@ -33,7 +36,7 @@ public class create
                     nu = sc.next();
                    
                     password.add(nu);
-                    System.out.println("등록된 아이디는 : " + na + " / 비밀번호는 : " + nu + "입니다.");
+                    System.out.println("등록된 이름은 : "+ na + " / 등록된 아이디는 : " + ni + " / 비밀번호는 : " + nu + " 입니다.");
                   
                 
                 } else 
