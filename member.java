@@ -26,8 +26,7 @@ import java.util.Map;
 	            System.out.println("1.회원등록");
 	            System.out.println("2.회원검색");
 				System.out.println("3.업데이트");
-				System.out.println("4.삭제");
-	            System.out.println("5.종료");
+				System.out.println("4.종료");
 
 	           
 	            int input = sc.nextInt();
@@ -51,10 +50,26 @@ import java.util.Map;
 	        		System.out.println("검색한 아이디의 이름은 : "+member.get(name)+" 입니다.");
 
 					break;
+				case 3:
+	            
+					{
+						
+						System.out.println("이름을 입력하세요 : ");
+						ni = sc.next();
+						System.out.println("수정할 id를 입력하세요 : ");
+						ni2 = sc.next();
+						
+						member.replace(ni,ni2);
+						System.out.println("업데이트 되었습니다.");
+						System.out.println("수정 목록 : "+member.toString());
+						
+						
+					}
+						break;
 	        		
 	            
 
-	            case 3:
+	            case 4:
 	              
 	            	System.out.println("종료하겠습니다.");
 	                bool = false;
