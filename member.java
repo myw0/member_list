@@ -1,8 +1,9 @@
 
+import java.util.Scanner;
 
-	import java.util.Scanner;
-
-	import java.util.HashMap;
+import java.util.HashMap;
+import java.util.Map;
+//import dto;
 
 
 	public class member
@@ -12,26 +13,34 @@
 		{
 			Scanner sc = new Scanner(System.in);
 			HashMap <String, String> member = new HashMap<String, String>();
-			String ni, na;
+			String ni, na = null, ni2;
 			boolean bool = true;
 			String findKey = "";
-			
+			String check;
+
+			boolean swit[] = new boolean[20];
+			//dtoClass dto[] = new dtoClass[20];
+
 			while(bool) 
 			{
 	            System.out.println("1.회원등록");
 	            System.out.println("2.회원검색");
-	            System.out.println("3.종료");
+				System.out.println("3.업데이트");
+				System.out.println("4.삭제");
+	            System.out.println("5.종료");
 
 	           
 	            int input = sc.nextInt();
 	            switch(input) 
 	            {
 	            case 1:
-	            	System.out.println("등록할 이름과 아이디를 입력하세요");
+	            	System.out.println("등록할 이름을 입력하세요");
 	                na = sc.next();
+					System.out.println("등록할 아이디를 입력하세요");
 	                ni = sc.next();
 	                member.put(na, ni);
-	                System.out.println("등록한 이름은 : " + na + " 아이디는 : " + ni );
+	                System.out.println("등록한 이름은 : " + na + " 등록한 아이디는 : " + ni );
+
 	                break;
 	                
 	            case 2:
@@ -40,18 +49,18 @@
 	        		
 	        		name = sc.next();
 	        		System.out.println("검색한 아이디의 이름은 : "+member.get(name)+" 입니다.");
+
+					break;
 	        		
 	            
-	                break;
+
 	            case 3:
 	              
 	            	System.out.println("종료하겠습니다.");
 	                bool = false;
-	      
-	        
-	          
+
 	            }
-	        }
-	    }
+			}
+		}
 	}
 
